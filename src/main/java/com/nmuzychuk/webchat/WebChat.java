@@ -22,12 +22,11 @@ public class WebChat {
 
     @OnMessage
     public void onMessage(final Session session, final Message message) throws IOException, EncodeException {
-        log.info(String.format("Got message: %s", message));
         String room = (String) session.getUserProperties().get("room");
 
         for (Session s : session.getOpenSessions()) {
             if (s.isOpen() && room.equals(s.getUserProperties().get("room"))) {
-                log.info(String.format("Sending object, session: %s", s.getId()));
+                log.info(String.format("Sending object to %s", s.getId()));
                 s.getBasicRemote().sendObject(message);
             }
         }
