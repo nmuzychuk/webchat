@@ -6,6 +6,7 @@ import javax.websocket.DecodeException;
 import javax.websocket.Decoder;
 import javax.websocket.EndpointConfig;
 import java.io.StringReader;
+import java.time.LocalDateTime;
 
 public class MessageDecoder implements Decoder.Text<Message> {
 
@@ -16,6 +17,7 @@ public class MessageDecoder implements Decoder.Text<Message> {
                 Json.createReader(new StringReader(s)).readObject();
         message.setBody(jsonObject.getString("body"));
         message.setSender(jsonObject.getString("sender"));
+        message.setTime(LocalDateTime.now().toString());
 
         return message;
     }
@@ -27,12 +29,12 @@ public class MessageDecoder implements Decoder.Text<Message> {
 
     @Override
     public void init(EndpointConfig endpointConfig) {
-
+        // No implementation necessary
     }
 
     @Override
     public void destroy() {
-
+        // No implementation necessary
     }
 
 }

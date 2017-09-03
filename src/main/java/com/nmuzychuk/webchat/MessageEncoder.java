@@ -12,17 +12,18 @@ public class MessageEncoder implements Encoder.Text<Message> {
         return Json.createObjectBuilder()
                 .add("body", message.getBody())
                 .add("sender", message.getSender())
+                .add("time", message.getTime())
                 .build().toString();
     }
 
     @Override
     public void init(EndpointConfig endpointConfig) {
-
+        // No implementation necessary
     }
 
     @Override
     public void destroy() {
-
+        // No implementation necessary
     }
 
 }
