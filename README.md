@@ -1,5 +1,5 @@
 # Web Chat
-[![Build Status](https://travis-ci.org/nmuzychuk/webchat.svg?branch=master)](https://travis-ci.org/nmuzychuk/webchat)
+[![Java CI with Maven](https://github.com/nmuzychuk/webchat/actions/workflows/maven.yml/badge.svg)](https://github.com/nmuzychuk/webchat/actions/workflows/maven.yml)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0b43fe62d904ac4a1272364db208bf7)](https://www.codacy.com/app/nmuzychuk/webchat)
 
 ## Overview
